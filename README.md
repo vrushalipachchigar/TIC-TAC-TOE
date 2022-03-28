@@ -8,6 +8,7 @@ This is basically a 2 player Tic-Tac-Toe game.
 First players chose their desired name and start this game.
 
 It also stores your scores in local storage so next time when you come again you don't loose your data.
+
 I used libraries such as moment.js and DataTables to create the dynamic Scoreboard.
 
 ## 💻 Tools and Technologies:
