@@ -72,12 +72,11 @@ body {
     /* background-color: rgb(132, 205, 230); */
 }
 
-
-/* .board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
     background-color: lightgrey;
-} */
+}
 
 .cell.x::before,
 .cell.x::after,

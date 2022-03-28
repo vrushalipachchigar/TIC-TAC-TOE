@@ -115,6 +115,7 @@ function startGame() {
         cell.removeEventListener('click', handleClick)
         cell.addEventListener('click', handleClick, { once: true })
     })
+    setBoardHoverClass()
     winningMessageElement.classList.remove('show')
 }
 
@@ -130,6 +131,7 @@ function handleClick(e) {
         playerScore();
     } else {
         swapTurns()
+        setBoardHoverClass()
     }
 }
 
@@ -161,6 +163,16 @@ function placeMark(cell, currentClass) {
 
 function swapTurns() {
     circleTurn = !circleTurn
+}
+
+function setBoardHoverClass() {
+    board.classList.remove(X_CLASS)
+    board.classList.remove(CIRCLE_CLASS)
+    if (circleTurn) {
+        board.classList.add(CIRCLE_CLASS)
+    } else {
+        board.classList.add(X_CLASS)
+    }
 }
 
 function checkWin(currentClass) {
@@ -234,28 +246,6 @@ function scorehistory() {
         }
         localStorage.setItem('obj', JSON.stringify(obj));
 
-        // var datefnc = function () {
-        //     var cell1data = JSON.parse(localStorage.getItem("obj"));
-        //     //get properties of object
-        //     var datedata =cell1data[0].datetimedata;
-        //     var resdata = cell1data[0].result;
-
-        //     var table = document.getElementById("timestmps");
-        //     var row = table.insertRow(5);
-        //     var cell1 = row.insertCell(0);
-        //     var cell2 = row.insertCell(1);
-
-        //     cell1.innerHTML =  moment(datedata, "YYYYMMDD hh:mm:ss").fromNow();
-        //     cell2.innerHTML = resdata;
-
-        //     cell1.colSpan = "2";
-        //     cell2.colSpan = "2";
-        //     // cell1.innerHTML = moment(dateTime, "YYYYMMDD hh:mm:ss").fromNow();
-        //     // cell2.innerHTML = playerXName + " won ";
-        //     cell1.setAttribute("title", datedata);
-
-        // }
-        // datefnc();
 
     } else if (checkWin(CIRCLE_CLASS)) {
         var playerOName = localStorage.getItem('player2name');
