@@ -45,10 +45,8 @@ form.addEventListener('submit', function(event) {
     document.getElementById("player1name").innerHTML = playerxname + ' X';
     document.getElementById("player2name").innerHTML = playeroname + ' O';
 
-    // $('#submitBtn').click(function(event) {
-    //     event.preventDefault();
     $('#myModal').modal('hide');
-    // });
+
     startGame()
 
 });
@@ -189,7 +187,6 @@ function playerScore() {
         var ps1 = localStorage.getItem('player1score');
         parseInt(ps1);
         ps1++;
-        // playerXScore++;
         
         document.getElementById('player1score').innerHTML = ps1;
         localStorage.setItem('player1score', ps1);
@@ -250,12 +247,14 @@ function scorehistory() {
 
     } else if (checkWin(CIRCLE_CLASS)) {
         var playerOName = localStorage.getItem('player2name');
+
         //take user date
         var today = new Date();
         var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date + ' ' + time;
         var results = playerOName + " won ";
+
         //create array of objects having properties as result and datetimedata
         var obj = [{
             datetimedata: dateTime,
@@ -268,6 +267,7 @@ function scorehistory() {
         }
         localStorage.setItem('obj', JSON.stringify(obj));
     } else {
+
         //take user date
         var today = new Date();
         var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
@@ -289,7 +289,6 @@ function scorehistory() {
     }
 }
 data = JSON.parse(localStorage.getItem("obj"));
-//get datetimedata array from local storage
 
 function myRender(data, type, row, meta) {
     return moment(data, "YYYYMMDD hh:mm:ss").fromNow();
@@ -297,7 +296,6 @@ function myRender(data, type, row, meta) {
 
 $(document).ready(function () {
     $('#scorehis').DataTable({
-        // "order": [[0, "desc"]],
         "ordering": false,
         "paging": false,
         "searching": false,

@@ -76,6 +76,7 @@ body {
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
     background-color: lightgrey;
+    animation: fadeIn 300ms;
 }
 
 .cell.x::before,
