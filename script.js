@@ -190,6 +190,7 @@ function playerScore() {
         parseInt(ps1);
         ps1++;
         // playerXScore++;
+        
         document.getElementById('player1score').innerHTML = ps1;
         localStorage.setItem('player1score', ps1);
 
