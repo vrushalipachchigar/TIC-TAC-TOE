@@ -1,5 +1,5 @@
 # TIC-TAC-TOE
-<img src="https://media1.giphy.com/media/ChzovjKPuEiYe8ePih/200w.webp?cid=ecf05e47lziy401nvri5t4yqije1i8xnsi0aty77elq62lgk&rid=200w.webp&ct=g" width="150px">
+<img src="https://media4.giphy.com/media/riDHBmjuV2NhOJ2IeU/200.webp?cid=ecf05e47kkueunt69wdt0gbsseoczypajznmehvn64ywjrf6&rid=200.webp&ct=g" width="150px">
 
 You can find it here:  https://vrushalipachchigar.github.io/TIC-TAC-TOE/
 
